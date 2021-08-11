@@ -92,6 +92,12 @@ variable "os_disk_size_gb" {
   default     = 50
 }
 
+variable "os_disk_type" {
+  description = "Disk type of nodes (Ephemeral or Managed)."
+  type        = string
+  default     = "Managed"
+}
+
 variable "private_cluster_enabled" {
   description = "If true cluster API server will be exposed only on internal IP address and available only in cluster vnet."
   type        = bool

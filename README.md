@@ -42,7 +42,8 @@ module "aks" {
   network_plugin                   = "azure"
   vnet_subnet_id                   = module.network.vnet_subnets[0]
   os_disk_size_gb                  = 50
-  sku_tier                         = "Paid" # defaults to Free
+  os_disk_type                     = "Ephemeral" # defaults to Managed
+  sku_tier                         = "Paid"      # defaults to Free
   enable_role_based_access_control = true
   rbac_aad_admin_group_object_ids  = [data.azuread_group.aks_cluster_admins.id]
   rbac_aad_managed                 = true

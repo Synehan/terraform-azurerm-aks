@@ -39,6 +39,7 @@ module "aks" {
   network_plugin                  = "azure"
   vnet_subnet_id                  = azurerm_subnet.test.id
   os_disk_size_gb                 = 60
+  os_disk_type                    = "Ephemeral"
   enable_http_application_routing = true
   enable_azure_policy             = true
   enable_host_encryption          = true
