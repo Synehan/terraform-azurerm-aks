@@ -295,3 +295,9 @@ variable "enable_host_encryption" {
   type        = bool
   default     = false
 }
+
+variable "enable_only_critical_addons" {
+  description = "Enable CriticalAddonsOnly=true:NoSchedule taint for default node pool. Useful when using multiple node pools: https://docs.microsoft.com/en-us/azure/aks/use-multiple-node-pools"
+  type        = bool
+  default     = false
+}

@@ -41,6 +41,7 @@ module "aks" {
   os_disk_size_gb                 = 60
   os_disk_type                    = "Ephemeral"
   enable_http_application_routing = true
+  enable_only_critical_addons     = true
   enable_azure_policy             = true
   enable_host_encryption          = true
   sku_tier                        = "Paid"
