@@ -301,3 +301,9 @@ variable "enable_only_critical_addons" {
   type        = bool
   default     = false
 }
+
+variable "api_server_authorized_ip_ranges" {
+  description = "The IP ranges to allow for incoming traffic to the server nodes."
+  type        = list(string)
+  default     = []
+}
