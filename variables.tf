@@ -3,6 +3,12 @@ variable "resource_group_name" {
   type        = string
 }
 
+variable "location" {
+  description = "Location where to deploy the cluster (by default, same as the resource group)"
+  type        = string
+  default     = null
+}
+
 variable "cluster_name" {
   description = "(Optional) The name for the AKS resources created in the specified Azure Resource Group. This variable overwrites the 'prefix' var (The 'prefix' var will still be applied to the dns_prefix if it is set)"
   type        = string
